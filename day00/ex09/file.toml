@@ -1,0 +1,11 @@
+# This is a TOML file
+
+[info]
+name = "abayar"
+version = "0.0.1"
+description = "this is my first python package"
+
+[settings]
+setting1 = "Value 1"
+setting2 = 42
+setting3 = true

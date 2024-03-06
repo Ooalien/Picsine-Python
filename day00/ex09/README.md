@@ -1,0 +1,1 @@
+This is a simple package with one function to count how many items are in a given list
