@@ -1,9 +1,7 @@
 from array import array
-from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 import copy
-
 
 
 def show_image(array: array) -> None:
@@ -20,6 +18,7 @@ def ft_invert(array) -> array:
     show_image(255 - array)
     return array
 
+
 def ft_red(array) -> array:
     '''Inverts the color of the image received to the red channel.'''
     tmp_array = copy.deepcopy(array)
@@ -27,6 +26,7 @@ def ft_red(array) -> array:
     tmp_array[:, :, 2] = 0
     show_image(tmp_array)
     return array
+
 
 def ft_green(array) -> array:
     '''Inverts the color of the image received to the green channel.'''
@@ -36,6 +36,7 @@ def ft_green(array) -> array:
     show_image(tmp_array)
     return array
 
+
 def ft_blue(array) -> array:
     '''Inverts the color of the image received to the blue channel.'''
     tmp_array = copy.deepcopy(array)
@@ -44,15 +45,15 @@ def ft_blue(array) -> array:
     show_image(tmp_array)
     return array
 
-def ft_grey(array) -> array:
+
+def ft_grey(a) -> array:
     '''Inverts the color of the image received to the grey channel.'''
-    tmp_array = copy.deepcopy(array)
-    # gray_a rray = ( array[:,:,0] -  array[:,:,1] -  array[:,:,2]) / 3
-    gray_array = np.zeros_like(array)
-    tmp_array[:,:,1] = tmp_array[:,:,1]
-    tmp_array[:,:,2] = tmp_array[:,:,2]
-    tmp_array[:,:,0] = tmp_array[:,:,0]
-    show_image(tmp_array)
-    print(">>>>><<<<<<<")
-    print(tmp_array)
+    t = copy.deepcopy(a)
+    t[:, :, 0] = \
+        np.sum(a[:, :, :3] / np.array([1/0.2989, 1/0.5870, 1/0.1140]), axis=2)
+    t[:, :, 1] = \
+        np.sum(a[:, :, :3] / np.array([1/0.2989, 1/0.5870, 1/0.1140]), axis=2)
+    t[:, :, 2] = \
+        np.sum(a[:, :, :3] / np.array([1/0.2989, 1/0.5870, 1/0.1140]), axis=2)
+    show_image(t)
     return array
