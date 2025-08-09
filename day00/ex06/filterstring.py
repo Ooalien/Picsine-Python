@@ -1,6 +1,8 @@
 import sys
 
+
 if __name__ == "__main__":
+    """Filter words from the first argument that are longer than the second argument."""
     if (len(sys.argv) != 3):
         print("AssertionError: the arguments are bad")
         sys.exit(1)
@@ -13,6 +15,4 @@ if __name__ == "__main__":
     res = []
     for w in sys.argv[1].split():
         res.append(w) if len(w) > int(sys.argv[2]) else None
-        
     print(res)
-    # print(filter(lambda x: x.isalpha(), sys.argv[1]))

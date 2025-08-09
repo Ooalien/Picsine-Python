@@ -1,3 +1,4 @@
-#this function returns the number of times the item is in the list
+
 def count_in_list(list, item):
+    """Count the occurrences of an item in a list."""
     return list.count(item)
