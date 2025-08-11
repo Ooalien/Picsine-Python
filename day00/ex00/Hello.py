@@ -11,9 +11,13 @@ ft_tuple[-1] = "Maroc!"
 ft_tuple = tuple(ft_tuple)
 
 list_tmp = (list(ft_set))
-
-list_tmp[-1] = "BenGuerrir!"
+if list_tmp[-1] == "tutu!":
+    list_tmp[-1] = "BenGuerrir!"
+else:
+    list_tmp[0] = "BenGuerrir!"
 ft_set = set(list_tmp)
+
+
 ft_dict['Hello'] = "1337-BG!"
 
 print(ft_list)

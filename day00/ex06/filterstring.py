@@ -2,7 +2,8 @@ import sys
 
 
 if __name__ == "__main__":
-    """Filter words from the first argument that are longer than the second argument."""
+    """Filter words from the first argument that are
+             longer than the second argument."""
     if (len(sys.argv) != 3):
         print("AssertionError: the arguments are bad")
         sys.exit(1)
